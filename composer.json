@@ -1,0 +1,87 @@
+{
+    "name": "laravel/laravel",
+    "description": "The Laravel Framework.",
+    "keywords": ["framework", "laravel"],
+    "license": "MIT",
+    "type": "project",
+    "require": {
+        "php": ">=7.1.3",
+        "barryvdh/laravel-cors": "^0.11.0",
+        "doctrine/dbal": "^2.7",
+        "fideloper/proxy": "~4.0",
+        "fzaninotto/faker": "^1.7",
+        "jaspaul/laravel-rollout": "^0.3.3",
+        "laravel/cashier": "^7.0",
+        "laravel/framework": "5.6.*",
+        "laravel/passport": "^5.0",
+        "laravel/spark-aurelius": "~6.0",
+        "laravel/tinker": "~1.0",
+        "league/csv": "^9.0",
+        "league/flysystem-aws-s3-v3": "^1.0",
+        "phpoffice/phpspreadsheet": "^1.1",
+        "predis/predis": "^1.1",
+        "rollbar/rollbar-laravel": "^2.3",
+        "webpatser/laravel-uuid": "^3.0"
+    },
+    "require-dev": {
+        "filp/whoops": "~2.0",
+        "mockery/mockery": "0.9.*",
+        "nunomaduro/collision": "~2.0",
+        "phpunit/phpunit": "~7.0",
+        "symfony/thanks": "^1.0",
+        "squizlabs/php_codesniffer": "*"
+    },
+    "autoload": {
+        "classmap": [
+            "database/seeds",
+            "database/factories"
+        ],
+        "psr-4": {
+            "App\\": "app/"
+        },
+        "files": ["app/helpers.php"]
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "dont-discover": [
+            ]
+        }
+    },
+    "scripts": {
+        "post-root-package-install": [
+            "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
+        ],
+        "post-create-project-cmd": [
+            "@php artisan key:generate"
+        ],
+        "post-autoload-dump": [
+            "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
+            "@php artisan package:discover"
+        ],
+        "test": [
+            "phpunit --testdox",
+            "phpcs --standard=ruleset.xml app"
+        ],
+        "post-install-cmd": [
+            "php artisan passport:keys"
+        ]
+    },
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://spark-satis.laravel.com"
+        }
+    ],
+    "config": {
+        "preferred-install": "dist",
+        "sort-packages": true,
+        "optimize-autoloader": true
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}

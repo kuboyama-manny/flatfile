@@ -1,0 +1,3 @@
+ENV=dev
+PORT=2000
+LANGUAGE=en

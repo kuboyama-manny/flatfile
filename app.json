@@ -1,0 +1,57 @@
+{
+  "name": "Flatfile.io",
+  "description": "",
+  "keywords": [],
+  "website": "https://flatfile.io",
+  "repository": "https://github.com/flatfilers/application",
+  "env": {
+    "APP_KEY": "base64:LLdnRQE50wyD+GcIpaAwsGXAJJHcbzevUe2sPwAJPRg=",
+    "APP_LOG": "errorlog",
+    "APP_NAME": "flatfile.io",
+    "BUILD_ASSETS": "yes",
+    "COMPOSER_GITHUB_OAUTH_TOKEN": "4285c04a768c030d461e8b32f80fe08651cd0bf4",
+    "DB_CONNECTION": "pgsql",
+    "MIX_IMPORTER_MOUNT_URL": "/importer/:key",
+    "NODE_MODULES_CACHE": "false",
+    "OAUTH_LOGIN_URL": "/dashboard-login",
+    "FLATFILE_API_BASE": "/api"
+  },
+  "addons": [
+    {
+      "plan": "heroku-postgresql:hobby-dev"
+    }
+  ],
+  "buildpacks": [
+    {
+      "url": "heroku/php"
+    },
+    {
+      "url": "heroku/nodejs"
+    }
+  ],
+  "scripts": {
+    "postdeploy": "php artisan migrate --force && php artisan db:seed --force"
+  },
+  "environments": {
+    "test": {
+      "scripts": {
+        "test-setup": "bin/heroku-test-setup",
+        "test": "bin/heroku-test"
+      },
+      "env": {
+        "SAUCE_USERNAME": "flatfile",
+        "SAUCE_ACCESS_KEY": "29decce1-45c6-4fcf-8be2-3c9aab0fac16",
+        "APP_ENV": "test",
+        "APP_KEY": "base64:LLdnRQE50wyD+GcIpaAwsGXAJJHcbzevUe2sPwAJPRg=",
+        "APP_LOG": "errorlog",
+        "APP_NAME": "flatfile.io",
+        "BUILD_ASSETS": "no",
+        "COMPOSER_GITHUB_OAUTH_TOKEN": "4285c04a768c030d461e8b32f80fe08651cd0bf4",
+        "DB_CONNECTION": "pgsql",
+        "MIX_IMPORTER_MOUNT_URL":"/importer/:key",
+        "OAUTH_LOGIN_URL": "/dashboard-login",
+        "FLATFILE_API_BASE": "/api"
+      }
+    }
+  }
+}

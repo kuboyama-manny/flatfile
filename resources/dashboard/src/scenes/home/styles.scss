@@ -1,0 +1,72 @@
+@import '~styles/measures';
+@import '~styles/colors';
+
+.overview {
+  padding: $padding-normal;
+}
+
+.widgetRow {
+  display: flex;
+  margin: 0 (-$padding-normal/2);
+
+  .col {
+    flex: 1 0 25%;
+    padding: 0 ($padding-normal/2);
+  }
+
+  .col65 {
+    @extend .col;
+    flex: 1 0 65%;
+  }
+}
+
+.importList {
+  color: #7F8FA4;
+
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    li {
+      display: flex;
+      line-height: 60px;
+      padding: ($padding-normal - 10) $padding-normal;
+
+      .circle {
+        background-color: $orange;
+        border-radius: 36px;
+        color: white;
+        display: inline-block;
+        font-weight: 500;
+        height: 36px;
+        line-height: 36px;
+        margin-right: 15px;
+        position: relative;
+        top: 2px;
+        text-align: center;
+        vertical-align: baseline;
+        width: 36px;
+      }
+
+      a {
+        color: inherit;
+      }
+
+      p {
+        font-size: 1rem;
+        line-height: 1.3;
+        margin: 0;
+
+        &.title {
+          color: #5D6776;
+          font-weight: 500;
+        }
+      }
+
+      &:nth-child(n+2) {
+        border-top: 1px solid $color-border;
+      }
+    }
+  }
+}

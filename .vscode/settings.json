@@ -1,0 +1,9 @@
+{
+  "editor.tabSize": 2,
+  "files.insertFinalNewline": true,
+  "files.trimFinalNewlines": true,
+  "html.format.endWithNewline": true,
+  "files.trimTrailingWhitespace": true,
+  "phpcs.standard": "./ruleset.xml",
+  "files.eol": "\n"
+}

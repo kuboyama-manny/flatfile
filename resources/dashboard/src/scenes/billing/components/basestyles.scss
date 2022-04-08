@@ -1,0 +1,34 @@
+.cardContainer {
+  box-shadow: 0 2px 3px rgba(55, 63, 67, 0.16);
+  margin-bottom: 10%
+}
+
+.cardHeader {
+  display: flex;
+  justify-content: space-between;
+  background-color: #ffffff;
+  padding: 2%;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.title {
+
+}
+
+.cardContent {
+  background-color: #f6f8f9;
+  padding: 2%;
+}
+
+.showingCardNum {
+  i {
+    span {
+      font-family: Whitney, Lato, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+      font-size: 1rem;
+      font-weight: 400;
+      line-height: 1.5;
+      color: #49545a;
+    }
+  }
+}

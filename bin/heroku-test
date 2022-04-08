@@ -1,0 +1,17 @@
+#!/bin/bash -e
+#
+function cleanup {
+  pkill sc
+  pkill php
+}
+
+trap cleanup EXIT
+
+nohup bash -c "./sc-4.4.11-linux/bin/sc --user $SAUCE_USERNAME --api-key $SAUCE_ACCESS_KEY --readyfile ~/sauce_is_ready 2>&1 &"
+while [ ! -e ~/sauce_is_ready ]; do sleep 1; done
+nohup bash -c "php artisan serve > /dev/null 2>&1 &"
+wget --retry-connrefused --no-check-certificate -T 30 http://localhost:8000
+echo "scripts running"
+
+composer test
+wdio

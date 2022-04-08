@@ -1,0 +1,86 @@
+$border: #DFE2E5;
+
+///////////invitationForm styles/////////////////
+
+.formContainer {
+
+  form {
+    display: flex;
+
+    .inputTitle {
+      font-size: 0.8rem;
+      font-weight: 500;
+      line-height: 1;
+      margin-bottom: 4px;
+    }
+    .formInput {
+      .inputText {
+        span {
+          color: #900;
+          font-weight: 500;
+          margin-left: 10px;
+        }
+      }
+      .formSubmit {
+        margin-top: 2%;
+      }
+    }
+
+    input {
+      margin-bottom: 10px;
+      width: 300px;
+    }
+  }
+
+  input:focus:invalid {
+    border-color: #900;
+    background-color: #FDD;
+  }
+}
+
+////////tableComponent styles////////////
+
+.tableContainer {
+  table {
+    width: 100%;
+
+    thead {
+      border-bottom: 1px solid $border;
+      tr {
+        background-color: transparent;
+        th:first-of-type{
+          padding-left: 30px;
+        }
+        th:last-of-type{
+          padding-right: 30px;
+        }
+        th {
+          color: #7F8FA4;
+          padding: 10px 10px;
+        }
+      }
+    }
+
+    tbody {
+      tr {
+        border-bottom: 1px solid $border;
+        td {
+          padding: 10px;
+          span {
+            font-size: 1rem;
+            font-weight: 500;
+          }
+          i {
+            cursor: pointer;
+          }
+          &:first-of-type {
+            padding-left: 30px;
+          }
+          &:last-of-type {
+            padding-right: 30px;
+          }
+        }
+      }
+    }
+  }
+}

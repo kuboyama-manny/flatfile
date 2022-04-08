@@ -1,0 +1,6 @@
+php artisan migrate:fresh
+php artisan db:seed
+wget https://saucelabs.com/downloads/sc-4.4.11-linux.tar.gz
+tar -xzf sc-4.4.11-linux.tar.gz
+yarn run build:importer
+yarn run build:core

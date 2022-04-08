@@ -1,0 +1,120 @@
+export default {
+  rows: [
+    {
+      required: 'value',
+      required_without: '',
+      required_without_all: '',
+      required_with_all: '',
+      required_with: 'value',
+      error: 'value',
+      numeric: 1,
+      email: 'email@gmail.com',
+      regex: 'four',
+      regex_excludes: 'all lowercase',
+      multiple: 'test',
+      required_without_multiple: '',
+      no_validation: 'value'
+    }, {
+      required: '',
+      required_without: '',
+      required_without_all: '',
+      required_with_all: '',
+      required_with: '',
+      error: '',
+      numeric: 'a',
+      email: 'not an email',
+      regex: 'more than four characters',
+      regex_excludes: 'Some Uppercase',
+      multiple: '',
+      required_without_multiple: '',
+      no_validation: ''
+    }, {
+      required: '',
+      required_without: 'value',
+      required_without_all: '',
+      required_with_all: '',
+      required_with: '',
+      error: 'value',
+      numeric: '1',
+      email: 'partial@email',
+      regex: 'du',
+      regex_excludes: 'got a number 1 and UPPERCASE',
+      multiple: 'value',
+      required_without_multiple: 'value',
+      no_validation: ''
+    }, {
+      required: '',
+      required_without: '',
+      required_without_all: 'value',
+      required_with_all: '',
+      required_with: '',
+      error: '',
+      numeric: '',
+      email: '',
+      regex: '',
+      regex_excludes: '',
+      multiple: '',
+      required_without_multiple: 'value',
+      no_validation: ''
+    }
+  ],
+  expected: [
+    {
+      required: [],
+      required_without: [],
+      required_without_all: [],
+      required_with_all: [],
+      required_with: [],
+      error: [],
+      numeric: [],
+      email: [],
+      regex: [],
+      regex_excludes: [],
+      multiple: [],
+      required_without_multiple: [],
+      no_validation: []
+    }, {
+      required: ['Failed validation'],
+      required_without: ['Failed validation'],
+      required_without_all: ['Failed validation'],
+      required_with_all: [],
+      required_with: [],
+      error: ['Must contain something'],
+      numeric: ['Failed validation'],
+      email: ['Failed validation'],
+      regex: ['Failed validation'],
+      regex_excludes: ['Must not contain an uppercase letter'],
+      multiple: ['Must have exactly 4 characters', 'Must have a value', 'Must contain the word "test"'],
+      required_without_multiple: ['Must contain a value if "required", "multiple", & "no_validation" are empty'],
+      no_validation: []
+    }, {
+      required: ['Failed validation'],
+      required_without: [],
+      required_without_all: [],
+      required_with_all: ['Failed validation'],
+      required_with: ['Failed validation'],
+      error: [],
+      numeric: [],
+      email: ['Failed validation'],
+      regex: ['Failed validation'],
+      regex_excludes: ['Must not contain a number', 'Must not contain an uppercase letter'],
+      multiple: ['Must have exactly 4 characters', 'Must contain the word "test"'],
+      required_without_multiple: [],
+      no_validation: []
+    }, {
+      required: ['Failed validation'],
+      required_without: ['Failed validation'],
+      required_without_all: [],
+      required_with_all: [],
+      required_with: ['Failed validation'],
+      error: ['Must contain something'],
+      numeric: [],
+      email: [],
+      regex: [],
+      regex_excludes: [],
+      multiple: ['Must have exactly 4 characters', 'Must have a value', 'Must contain the word "test"'],
+      required_without_multiple: [],
+      no_validation: []
+    }
+  ]
+}

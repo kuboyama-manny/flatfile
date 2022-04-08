@@ -1,0 +1,32 @@
+@import '~styles/colors';
+@import '~styles/measures';
+
+.cardContainer {
+  background-color: white;
+  border: 1px solid $lightest-gray;
+  border-radius: 4px;
+  margin-bottom: $padding-normal;
+  min-height: calc(100% - 30px);
+}
+
+.cardTitle {
+  font-size: 1.1rem;
+  font-weight: 500;
+  line-height: 1;
+  padding: $padding-normal;
+}
+
+.cardContent {
+  padding: $padding-normal;
+}
+
+.cardContentWithTable {
+  border-top: 1px solid white;
+  margin-top: -1px;
+  position: relative;
+  z-index: 2;
+}
+
+.cardTitle + .cardContent {
+  border-top: 1px solid $lightest-gray;
+}

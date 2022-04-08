@@ -1,0 +1,51 @@
+@import 'colors';
+@import 'measures';
+@import 'uikit';
+@import '~@blueprintjs/core/dist/blueprint.css';
+body, .ant-table, .ant-tag {
+  font-family: 'aktiv-grotesk', 'Helvetica Neue', Arial, sans-serif;
+}
+body {
+  font-size: 14px;
+  color: $color-text;
+  font-weight: 400;
+  -webkit-font-smoothing: initial;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden;
+  background-color: $color-bg;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body .uk-spinner {
+  width: 30px;
+  margin: 0 auto;
+  display: block;
+}
+
+body .Select {
+  z-index: unset;
+}
+
+body .rs-button--large {
+  margin-bottom: $global-gutter;
+}
+
+:global(.container) {
+  border: 1px solid $color-light-grey;
+  border-radius: 4px;
+  background-color: #fff;
+  h2 {
+    font-size: 18px;
+    color: $color-text;
+    margin: 0;
+    padding: $padding-normal;
+  }
+}

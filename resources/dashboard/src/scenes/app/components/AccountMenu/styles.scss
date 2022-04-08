@@ -1,0 +1,42 @@
+@import '~styles/colors';
+@import '~styles/uikit';
+
+.accDropdown {
+  border-bottom: 1px solid transparent;
+  cursor: pointer;
+  line-height: 70px;
+  margin-left: 15px;
+  position: relative;
+  z-index: 10;
+
+  .accPhoto {
+    background-color: $color-light-blue-gray;
+    border-radius: 42px;
+    border: 2px solid white;
+    color: $color-text-light;
+    display: inline-block;
+    font-size: 0.85rem;
+    font-weight: 500;
+    height: 42px;
+    line-height: 38px;
+    margin-right: 5px;
+    text-align: center;
+    vertical-align: baseline;
+    width: 42px;
+  }
+}
+
+.ptMenu {
+  border: 1px solid $color-border;
+  border-radius: 4px;
+  font-family: $global-font-family;
+  position: absolute;
+  top: 90%;
+  transition: all 200ms ease;
+  right: 0;
+
+  a.pt-menu-item {
+    text-decoration: none !important;
+    font-weight: 500;
+  }
+}

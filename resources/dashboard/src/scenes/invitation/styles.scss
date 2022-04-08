@@ -1,0 +1,54 @@
+.container {
+  padding: 30px;
+
+  .cardRow {
+    display: flex;
+    margin: 0 -15px;
+
+    .cardColumn {
+      flex: 1 1 50%;
+      padding: 0 15px;
+    }
+  }
+}
+
+.noPendingUsers {
+  color: #C2CAD4;
+  font-weight: 500;
+}
+
+.overlay {
+  background-color: rgba(#131820, 0.8);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 10;
+}
+
+.modalContent {
+  border: 1px solid transparent;
+  min-width: 440px;
+
+  .confirmMessage {
+    // text-align: center;
+    span {
+      font-size: 1rem;
+      font-weight: 500;
+    }
+
+    p {
+      margin: 5px 0 20px;
+    }
+  }
+
+  .buttonGroup {
+    margin-top: 15px;
+
+    button:nth-child(2) {
+      background-color: #dd3545;
+      margin-left: 10px;
+    }
+  }
+}

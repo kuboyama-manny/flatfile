@@ -1,0 +1,11 @@
+# Environment variables
+.env
+
+# Mac
+.DS_Store
+
+# Package Management
+node_modules
+
+# Build artifacts
+dist

@@ -1,0 +1,75 @@
+@import '~styles/colors';
+
+.statWidget {
+  display: flex;
+
+  .icon {
+    background-color: #2EA1F8;
+    border-radius: 60px;
+    color: white;
+    flex: 0 0 60px;
+    height: 60px;
+    line-height: 60px;
+    margin-right: 20px;
+    position: relative;
+    text-align: center;
+    width: 48px;
+
+
+    &.blue {
+      background-image: linear-gradient(#2EA1F8, #1990EA);
+    }
+
+    &.purple {
+      background-image: linear-gradient(#9D90E4, #8261E6);
+    }
+
+    &.orange {
+      background-image: linear-gradient(to top, #FD9918, #F8C95D);
+    }
+
+    &.green {
+      background-image: linear-gradient(to top, #2BB415, #5AD946);
+    }
+
+    svg {
+      opacity: 0.85;
+      position: relative;
+      top: -1px;
+    }
+
+    &:after {
+      border: 2px solid white;
+      border-radius: 50px;
+      content: '';
+      display: inline-block;
+      height: 50px;
+      left: 50%;
+      opacity: 0.4;
+      position: absolute;
+      top: 50%;
+      transform: translateX(-50%) translateY(-50%);
+      width: 50px;
+    }
+  }
+
+  .label {
+    .stat {
+      display: block;
+      font-size: 2rem;
+      font-weight: 500;
+      line-height: 1;
+      margin-top: 3px;
+    }
+    .name {
+      color: $color-text-light;
+      display: block;
+      font-size: 0.8rem;
+      font-weight: 500;
+      letter-spacing: 0.05em;
+      line-height: 1;
+      margin-top: 10px;
+      text-transform: uppercase;
+    }
+  }
+}

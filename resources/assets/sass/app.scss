@@ -1,0 +1,21 @@
+// Or, if you've published the Spark source to your project root...
+@import "./spark/spark";
+
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  margin-right: auto;
+  svg {
+    margin-right: 16px;
+    fill: #fff;
+  }
+  svg #path0_fill {
+    fill: #fff;
+  }
+  span {
+    font-family: "proxima-nova", Arial, sans-serif;
+    font-size: 20px;
+    color: #fff;
+  }
+}

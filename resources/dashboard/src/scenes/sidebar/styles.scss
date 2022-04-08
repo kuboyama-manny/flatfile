@@ -1,0 +1,57 @@
+@import '~styles/colors';
+@import '~styles/uikit';
+
+.sidebarGroup {
+  padding: $global-gutter;
+  color: $color-text-light;
+  a {
+    display: block;
+    text-decoration: none !important;
+    padding: 10px 0;
+    color: $color-text-light;
+    cursor: pointer;
+    font-weight: 500;
+
+    :global(.rs-icon) {
+      margin-right: 10px;
+      margin-top: -3px;
+    }
+
+    &:hover {
+      color: $color-text;
+      :global(.rs-icon) {
+        color: $color-text;
+      }
+    }
+  }
+}
+.linkHeader {
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: uppercase;
+  margin: 20px 0 5px 0;
+  color: inherit;
+  &:first-child {
+    margin-top: 0;
+  }
+}
+
+.activeLink {
+  color: $color-text !important;
+  :global(.rs-icon) {
+    color: $color-primary;
+  }
+}
+
+.licenseBtn {
+  padding: 10px 0;
+  cursor: pointer;
+
+  span {
+    padding-left: 10px;
+  }
+}
+
+.bold {
+  font-weight: bold;
+}

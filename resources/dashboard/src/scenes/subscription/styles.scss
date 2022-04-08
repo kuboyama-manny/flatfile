@@ -1,0 +1,118 @@
+@import '~elements/card/styles';
+
+.container {
+  padding: 30px;
+
+  .stripeForm {
+    padding: 30px;
+    background-color: #fafbfc;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.6);
+    border: 1px solid #e5e8ed;
+    border-top: 0;
+  }
+
+  .contactUSLink {
+    padding: 30px 0 0;;
+    text-align: center;
+
+    span {
+      font-size: 14px;
+      font-weight: normal;
+
+      a {
+        color: #279BF3;
+        font-weight: 500;
+      }
+    }
+  }
+}
+
+.overlay {
+  background-color: rgba(#131820, 0.8);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 10;
+}
+
+.modalContent {
+  border: 1px solid transparent;
+  width: 500px;
+
+  .confirmMessage {
+    // text-align: center;
+    span {
+      font-size: 1rem;
+      font-weight: 500;
+    }
+  }
+
+  .buttonGroup {
+    margin-top: 15px;
+
+    button:first-of-type {
+      background-color: #37b247;
+    }
+
+    button:nth-child(2) {
+      background-color: #F2F4F7;
+      margin-left: 10px;
+
+      span {
+        color: #354052;
+      }
+    }
+  }
+}
+
+.enterprisePreview {
+  background-color: rgba(#1990EA, 0.05);
+  border: 1px solid rgba(#1990EA, 0.1);
+  border-radius: 4px;
+  display: flex;
+  margin: 20px 0 10px;
+  padding: 20px;
+
+  strong {
+    display: inline-block;
+    font-weight: 700;
+    font-size: 1.2rem;
+    line-height: 1.4;
+    text-transform: capitalize;
+  }
+
+  .icon {
+    background-color: #3023AE;
+    // background-image: linear-gradient(to top right, #3023AE, #C86DD7);
+    background-image: linear-gradient(to top, #1990EA, #2EA1F8);
+    border-radius: 4px;
+    font-size: 1rem;
+    color: white;
+    height: 40px;
+    line-height: 40px;
+    margin-right: 15px;
+    text-align: center;
+    flex: 0 0 40px;
+
+    i {
+      font-size: 1.4rem;
+      position: relative;
+      top: 1px;
+      left: 1px;
+    }
+  }
+
+  p {
+    color: rgba(black, 0.6);
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.2;
+    margin: 5px 0 20px;
+  }
+
+  .description {
+    flex: 1 0 20%;
+  }
+}

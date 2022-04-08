@@ -1,0 +1,453 @@
+@import '~styles/forms';
+@import '~elements/card/styles';
+
+////////////// style for Base Component /////////////////
+
+.container {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  border-radius: 4px;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px 30px 0;
+  width: 100%;
+}
+
+.title {
+  padding-top: 20px;
+
+  .titleHeader {
+    display: flex;
+    justify-content: center;
+    height: 24px;
+    line-height: normal;
+
+    span {
+      font-size: 20px;
+      font-weight: 500;
+    }
+  }
+
+  .titleContent {
+    display: flex;
+    font-size: 1rem;
+    justify-content: center;
+    line-height: 1.5;
+    margin-top: 10px;
+    margin-bottom: 20px;
+
+    span {
+      text-align: center;
+      color: #7f8fa4;
+    }
+  }
+}
+
+.buttonGroup {
+  height: 36px;
+  text-align: center;
+
+  .normalTab:nth-child(1) {
+    background-color: #ffffff;
+    border-top-right-radius: 0px !important;
+    border-bottom-right-radius: 0px !important;
+    span {
+      color: #49545a;
+      font-size: 14px;
+      line-height: 1.6;
+    }
+  }
+  .normalTab:nth-child(2) {
+    background-color: #ffffff;
+    border-top-left-radius: 0px !important;
+    border-bottom-left-radius: 0px !important;
+    span {
+      color: #49545a;
+      font-size: 14px;
+      line-height: 1.6;
+    }
+  }
+
+  .activeTab:nth-child(1) {
+    border-top-right-radius: 0px !important;
+    border-bottom-right-radius: 0px !important;
+    background-image: linear-gradient(to top, #1991eb, #2da1f8);
+    span {
+      color: #ffffff;
+      font-size: 14px;
+      line-height: 1.6;
+    }
+  }
+  .activeTab:nth-child(2) {
+    border-top-left-radius: 0px !important;
+    border-bottom-left-radius: 0px !important;
+    background-image: linear-gradient(to top, #1991eb, #2da1f8);
+    span {
+      color: #ffffff;
+      font-size: 14px;
+      line-height: 1.6;
+    }
+  }
+
+  .normalTab, .activeTab:focus {
+    outline: 0;
+  }
+}
+
+.body {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 60px;
+
+  .freeTrialDate {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2% auto;
+
+    span {
+      width: 100%;
+      text-align: center;
+      padding: 2%;
+      background-color: #fff3cd;
+      font-size: 1rem;
+      font-weight: 500;
+      color: #856404;
+    }
+  }
+
+  .customerCardGroup {
+    display: flex;
+    flex-direction: row;
+    padding: 0 60px;
+    justify-content: space-around;
+
+    @media screen and (max-width: 992px) {
+      flex-wrap: wrap;
+    }
+  }
+}
+
+//////////////styles for Card Component//////////////
+
+.monthlyContainer,
+.activeStyle {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 25%;
+  padding: 30px;
+  border: 1px solid #DFE3E9;
+  border-radius: 4px;
+  cursor: pointer;
+  margin: 0 15px;
+  transition: all 400ms ease;
+
+  &:hover {
+    border: 1px solid #1990EA;
+  }
+
+  .monthlyCardTitle {
+    font-size: 12px;
+    color: #7383a1;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    padding: 0 10px;
+  }
+
+  .monthlyBill {
+    display: flex;
+    flex-direction: column;
+    padding: 0 10px;
+  }
+
+  .monthlyUsers {
+    margin-bottom: 16px;
+    padding: 0 10px;
+    span {
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+    }
+  }
+
+  hr {
+    margin: 0 0 15px;
+  }
+
+  .Features {
+
+    .FeaturesContent {
+      display: flex;
+      flex-direction: column;
+      span {
+        font-size: 14px;
+        font-stretch: normal;
+        font-weight: 500;
+        font-style: normal;
+        letter-spacing: normal;
+        color: #354052;
+        margin-bottom: 10px;
+        padding: 0 10px;
+      }
+    }
+  }
+}
+
+.activeStyle {
+  border: 1px solid transparent;
+  cursor: pointer;
+  background-color: #1a91eb;
+  background-image: linear-gradient(to top, #1990EA, #2EA1F8);
+  color: white;
+
+  &:hover {
+    border: 1px solid transparent;
+  }
+
+  .monthlyCardTitle {
+    color: rgba(white, 0.6);
+  }
+
+  .monthlyBill {
+    color: white;
+  }
+
+  .monthlyUsers {
+    color: white;
+    margin-bottom: 16px;
+    span {
+      font-size: 12px;
+      font-weight: 500;
+    }
+  }
+
+  hr {
+    border-top: 1px solid rgba(white, 0.4);
+  }
+
+  .Features {
+
+    .FeaturesContent span {
+      color: white;
+    }
+  }
+}
+
+/////////stripForm style///////////
+
+.formContainer {
+  .formContent {
+    display: flex;
+    flex-direction: column;
+    margin: 10px 0 0;
+
+      .selectCard {
+        display: flex;
+        flex-direction: column;
+        line-height: 32px;
+        width: 100%;
+
+        select {
+          height: 36px;
+          margin: 5px 0;
+          display: flex;
+          border: 1px solid #d9d9d9;
+          background-color: white;
+          border-radius: 4px;
+          padding: 0 10px;
+          width: 100%;
+        }
+
+        label {
+          display: block;
+          font-size: 0.8rem;
+          font-weight: 500;
+          line-height: 1;
+          margin-bottom: 4px;
+        }
+      }
+
+      .cardName {
+        display: flex;
+        flex-direction: column;
+
+        input {
+          height: 36px;
+          // margin: 5px 0;
+          display: flex;
+          border: 1px solid #d9d9d9;
+          background-color: white;
+          border-radius: 4px;
+          padding: 0 10px;
+          width: 100%;
+        }
+
+        span {
+          font-weight: 500;
+        }
+
+        label {
+          display: block;
+          font-size: 0.8rem;
+          font-weight: 500;
+          line-height: 1;
+          margin-bottom: 4px;
+        }
+      }
+      .stripeCardContent {
+
+        span {
+          font-weight: 500;
+        }
+
+        .stripeCard {
+          height: 36px;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          border: 1px solid #d9d9d9;
+          background-color: white;
+          border-radius: 4px;
+          margin-top: 9px;
+          padding-left: 10px;
+        }
+      }
+
+    .zipCode {
+      display: flex;
+      flex-direction: column;
+      flex: 1 1 30%;
+
+      input {
+        height: 36px;
+        display: flex;
+        border: 1px solid #d9d9d9;
+        background-color: white;
+        border-radius: 4px;
+        padding-left: 10px;
+        width: 100%;
+      }
+
+      span {
+        font-weight: 500;
+      }
+    }
+
+    .buttonGroup {
+      margin-top: 20px;
+      text-align: left;
+    }
+
+    button {
+      background-color: #37b247;
+    }
+
+    button:nth-child(2) {
+      background-color: #F2F4F7;
+      margin-left: 10px;
+
+      span {
+        color: #354052;
+      }
+    }
+  }
+}
+.formContainer {
+
+  .inputGroup {
+    margin-bottom: 10px;
+
+    label {
+      display: block;
+      font-size: 0.8rem;
+      font-weight: 500;
+      line-height: 1;
+      margin-bottom: 4px;
+    }
+
+    input {
+      width: 400px;
+    }
+  }
+
+  .inputRow {
+    display: flex;
+    margin: 0 -15px;
+
+    .inputGroup {
+      flex: 1 0 50%;
+      padding: 0 15px;
+    }
+  }
+
+  .submitButton {
+    margin-top: 20px;
+  }
+}
+///////////check mark styles//////////////////
+
+.checkMarkContainer {
+  display: flex;
+  flex-direction: column;
+  background-color: #F2F4F7;
+  margin: 15px 10px 0;
+  padding: 20px;
+  border-radius: 6px;
+
+  .checkMarkImage {
+    display: flex;
+    justify-content: center;
+
+    svg {
+      height: 48px;
+      width: 48px;
+    }
+
+  }
+  .checkMarkText {
+    display: flex;
+    justify-content: center;
+
+    span {
+      font-size: 1rem;
+      font-weight: 500;
+      text-align: center;
+    }
+  }
+}
+
+.checkMarkActive {
+  border: 1px solid rgba(white, 0.2);
+  display: flex;
+  flex-direction: column;
+  background-color: transparent;
+  margin: 15px 10px 0;
+  padding: 20px;
+  border-radius: 6px;
+
+  .checkMarkImage {
+    display: flex;
+    justify-content: center;
+
+    svg {
+      height: 48px;
+      width: 48px;
+    }
+
+  }
+  .checkMarkText {
+    display: flex;
+    justify-content: center;
+
+    span {
+      font-size: 1rem;
+      font-weight: 500;
+      text-align: center;
+    }
+  }
+}

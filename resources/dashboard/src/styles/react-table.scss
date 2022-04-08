@@ -1,0 +1,32 @@
+@import '~styles/colors';
+@import '~styles/measures';
+@import '~styles/uikit';
+
+.table {
+  font-family: $global-font-family;
+  border-width: 0;
+  .tableTh {
+    border-right-width:0 !important;
+    letter-spacing: initial;
+    color: $color-text-light;
+    font-weight: 500;
+    font-size: 14px;
+    &:first-child {
+      padding-left: $padding-normal !important;
+    }
+    &:last-child {
+      padding-left: $padding-normal !important;
+    }
+  }
+  .tableTd {
+    &:first-child {
+      padding-left: $padding-normal !important;
+    }
+    &:last-child {
+      padding-left: $padding-normal !important;
+    }
+  }
+  .tableTrGroup {
+    border-bottom-color: $color-light-grey;
+  }
+}

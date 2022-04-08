@@ -1,0 +1,117 @@
+@import '~styles/colors';
+@import '~styles/measures';
+@import '~styles/uikit';
+
+.flex-form-group {
+  display: flex;
+  align-items: center;
+
+  :not(:last-child) {
+    margin-right: $global-small-gutter;
+  }
+}
+
+.flex-vertical-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.modelHome, .modelWrapper {
+  margin: $global-gutter;
+}
+
+.models {
+
+  header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: $global-gutter;
+  }
+
+
+  .model-edit {
+    background-color: #fff;
+    border-color: $color-line;
+    border-width: 0 1px 1px 1px;
+    border-style: solid;
+    border-radius: 0 0 $border-rounded-border-radius $border-rounded-border-radius;
+    font-family: $global-font-family;
+    margin-bottom: $global-gutter;
+    padding: $global-small-gutter;
+
+    .tabrow {
+
+    }
+
+    .processing-edit {
+      .select {
+        margin: 10px 0;
+      }
+    }
+
+    .flex {
+      display: flex;
+
+      .col {
+        padding: $global-small-gutter;
+
+        &:first-of-type {
+          flex-grow: 1;
+          border-right: 1px solid $color-line;
+        }
+        &:last-of-type {
+          flex-grow: 2;
+        }
+      }
+      .half-col {
+        > div {
+          padding-top: $global-small-gutter;
+        }
+        &:first-of-type {
+          width: 50%;
+        }
+        &:last-of-type {
+          width: 50%;
+        }
+      }
+    }
+
+    .settings {
+    }
+
+    .field-edit {
+
+      :global(.uk-table) {
+
+        th {
+          text-align: center;
+        }
+
+        td {
+          vertical-align: middle !important;
+          text-align: center;
+
+          &.long {
+            width: 10em;
+          }
+
+          :global(.rs-input) {
+            margin: 0 !important;
+          }
+        }
+      }
+
+      .field {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-bottom: $global-small-gutter;
+
+        & > div:not(:first-of-type) {
+          padding-left: $global-small-gutter;
+        }
+      }
+    }
+  }
+}

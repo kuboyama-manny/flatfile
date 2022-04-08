@@ -1,0 +1,163 @@
+@import '~styles/colors';
+@import '~styles/measures';
+
+.sidebar {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: $width-sidebar;
+  height: 100%;
+  border-right: 1px solid $color-line;
+  background-color: $color-white;
+}
+
+.content {
+  position: absolute;
+  top: 0;
+  left: $width-sidebar;
+  right: 0;
+  bottom: 0;
+  box-sizing: border-box;
+  height: 100%;
+  background-color: $color-bg;
+}
+
+.scrollWrapper {
+  position: absolute;
+  top: 70px;
+  overflow: auto;
+  width: 100%;
+  bottom: 0;
+}
+
+.frame {
+  height: 100%;
+  overflow: hidden;
+}
+
+.navHeader {
+  height: 70px;
+  border-bottom: 1px solid $color-line;
+  background-color: $color-white;
+  padding: 0 18px;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  &.rightSide {
+    &> div:first-child {
+      flex: 1 1 100%;
+    }
+    &> div:last-child {
+      white-space: nowrap;
+      flex: 2 0 auto;
+      display: flex;
+    }
+  }
+
+  h1 {
+    margin: 0;
+    font-size: $font-size-header;
+    font-weight: normal;
+  }
+
+  .navHeaderLogo {
+    color: inherit;
+    font-weight: 500;
+    text-decoration: none !important;
+  }
+
+  .navItem {
+    cursor: pointer;
+    line-height: 70px;
+    padding: 0 15px;
+
+    svg {
+      transition: all 200ms ease;
+    }
+
+    &:hover svg {
+      color: $blue;
+    }
+  }
+
+  .navItemBadge {
+    cursor: pointer;
+    line-height: 70px;
+    padding: 0 15px;
+    position: relative;
+
+    :global(#HW_badge_cont) {
+      position: absolute;
+      top: 0px;
+      bottom: 0px;
+      left: 0;
+      right: 0;
+      width: initial;
+      height: initial;
+      font-family: Arial, sans-serif;
+      :global(#HW_badge) {
+        top: 14px;
+        right: 8px;
+        left: initial;
+      }
+    }
+
+    svg {
+      transition: all 200ms ease;
+    }
+
+    &:hover svg {
+      color: $blue;
+    }
+  }
+}
+
+.overlay {
+  background-color: rgba(#131820, 0.3);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 10;
+}
+
+.modalContent {
+  border: 1px solid transparent;
+  width: 475px;
+
+  .confirmMessage {
+    // text-align: center;
+    span {
+      font-size: 1rem;
+      font-weight: 500;
+    }
+  }
+
+  .description {
+    background-color: rgba(#1990EA, 0.05);
+    border: 1px solid rgba(#1990EA, 0.1);
+    border-radius: 4px;
+    display: flex;
+    margin: 20px 0 10px;
+    padding: 20px;
+
+    span {
+      color: #e83e8c;
+    }
+  }
+
+  .buttonGroup {
+    margin-top: 15px;
+
+    button {
+      background-color: #2da1f8;
+      margin-left: 10px;
+
+      span {
+        color: #fff;
+      }
+    }
+  }
+}
